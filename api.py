@@ -17,7 +17,7 @@ def pnr_api(pnr):
 			pnr_data = parse_html(response.content)
 
 			if not pnr_data:
-				return jsonify({'status' : 'PNR FLUSHED',
+				return jsonify({'status' : 'PNR FLUSHED / SERVICE UNAVAILABLE',
 				'data' : {}
 					})
 
