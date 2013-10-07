@@ -1,10 +1,14 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 import requests
 
 from settings import *
 from utils import *
 
 app = Flask(__name__)
+
+@app.route('/')
+def homepage():
+	return render_template('index.html')
 
 @app.route('/pnr/<pnr>')
 def pnr_api(pnr):
@@ -33,8 +37,5 @@ def pnr_api(pnr):
 				'data' : {}
 			})
 
-@app.route('/')
-def homepage():
-	pass
 if __name__ == '__main__':
-	app.run()
+	app.run(debug=True)
