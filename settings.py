@@ -24,9 +24,12 @@ FIELDS_3 = (
 	)
 
 FIELDS_4 = (
-		'seat_number',
 		'status',
+		'seat_number',
 	)
+
 FIELDS_5 = (
 		'chart_prepared',
 	)
+
+STATION_CODES_FILE = 'station_codes.json'
