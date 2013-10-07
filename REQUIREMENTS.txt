@@ -6,6 +6,7 @@ MarkupSafe==0.18
 Werkzeug==0.9.4
 argparse==1.2.1
 distribute==0.6.24
+gunicorn==18.0
 ipdb==0.8
 ipython==1.1.0
 itsdangerous==0.23

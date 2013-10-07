@@ -42,6 +42,9 @@ def parse_html(html):
 	tree = parser.fromstring(html)
 	elements = tree.find_class(MAGIC_CLASS)
 
+	if not elements:
+		return None
+
 	fields = []
 
 	for element in elements[:-1]:
@@ -59,7 +62,7 @@ def build_response_dict(data):
 	response = {}
 
 	for i in range(len(FIELDS_1)):
-		response[FIELDS_1[i]] = data[0][i]
+		response[FIELDS_1[i]] = data[0][i].replace('*', '')
 
 	for j in range(len(FIELDS_2)):
 		response[FIELDS_2[j]] = {'code' : data[1][j], 'name' : station_codes[data[1][j]]}

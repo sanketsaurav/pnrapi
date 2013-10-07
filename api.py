@@ -14,8 +14,16 @@ def pnr_api(pnr):
 	if is_pnr_valid(pnr):
 		response = requests.post(BASE_URL, data={PARAM_NAME : pnr})
 		if response.status_code is 200:
+			pnr_data = parse_html(response.content)
+
+			if not pnr_data:
+				return jsonify({'status' : 'PNR FLUSHED',
+				'data' : {}
+					})
+
 			return jsonify({'status' : 'OK', 
-				'data' : build_response_dict(parse_html(response.content))})
+				'data' : build_response_dict(pnr_data)
+				})
 		else:
 			return jsonify({'status' : 'ERROR',
 				'data' : {}
