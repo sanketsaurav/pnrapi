@@ -12,7 +12,7 @@ def pnr_api(pnr):
 	Returns the PNR data in JSON after fetching from Indian Railways website.
 	"""
 	if is_pnr_dummy(pnr):
-		return jsonify(json.load(open("dummy_result.json","r")))
+		return jsonify(json.load(open("dummy_response.json","r")))
 		
 	if is_pnr_valid(pnr):
 		response = requests.post(BASE_URL, data={PARAM_NAME : pnr})
