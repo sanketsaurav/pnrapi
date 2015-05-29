@@ -1,0 +1,23 @@
+{
+  "status": "OK", 
+  "result": {
+    "passengers": [
+      {
+        "currentstatus": "CNF", 
+        "bookingstatus": "S4 35GN", 
+        "coach": ""
+      }
+    ], 
+    "eticket": true, 
+    "brdg": "SBC", 
+    "from": "SBC", 
+    "name": "KACHEGUDA EXP", 
+    "pnr": 4101917424, 
+    "trainno": 12786, 
+    "chart": "CHART NOT PREPARED", 
+    "to": "KCG", 
+    "journey": "30-Dec-2014", 
+    "error": "", 
+    "cls": "SL"
+  }
+}

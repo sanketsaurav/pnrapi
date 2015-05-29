@@ -7,6 +7,13 @@ from settings import *
 with open('station_codes.json') as codes:
 	station_codes = cjson.decode(codes.read())
 
+def is_pnr_dummy(pnr):
+	"""
+	Returns dummy response. Useful for testing
+	"""
+	if pnr == "0123456789":
+		return True
+
 def is_pnr_valid(pnr):
 	"""
 	Checks if the PNR is valid.
