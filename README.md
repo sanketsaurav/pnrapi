@@ -56,7 +56,7 @@ Nice and easy!
 If you don't have a valid PNR, don't worry.
 Use this query for all your testing purposes:
 ```
-http://pnrapi.dfth.in/pnr/6223797269
+http://pnrapi.dfth.in/pnr/0123456789
 ```
 It returns a dummy response.
 
