@@ -1,0 +1,32 @@
+{
+  "data": {
+    "alight": {
+      "code": "NDLS", 
+      "name": "NEW DELHI"
+    }, 
+    "board": {
+      "code": "JSME", 
+      "name": "JASIDIH"
+    }, 
+    "chart_prepared": "CHART PREPARED", 
+    "class": "SL", 
+    "from": {
+      "code": "JSME", 
+      "name": "JASIDIH"
+    }, 
+    "passenger": [
+      {
+        "seat_number": "Can/Mod", 
+        "status": "W/L 54,RLGN"
+      }
+    ], 
+    "to": {
+      "code": "NDLS", 
+      "name": "NEW DELHI"
+    }, 
+    "train_name": "POORVA EXPRESS", 
+    "train_number": "12303", 
+    "travel_date": "5-10-2013"
+  }, 
+  "status": "OK"
+}

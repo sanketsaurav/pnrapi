@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, json
 import requests
 
 from settings import *
@@ -11,6 +11,9 @@ def pnr_api(pnr):
 	"""
 	Returns the PNR data in JSON after fetching from Indian Railways website.
 	"""
+	if is_pnr_dummy(pnr):
+		return jsonify(json.load(open("dummy_response.json","r")))
+		
 	if is_pnr_valid(pnr):
 		response = requests.post(BASE_URL, data={PARAM_NAME : pnr})
 		if response.status_code is 200:

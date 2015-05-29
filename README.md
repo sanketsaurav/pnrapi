@@ -50,6 +50,16 @@ And you'll get a JSON like this:
 
 Nice and easy!
 
+
+## Testing ##
+
+If you don't have a valid PNR, don't worry.
+Use this query for all your testing purposes:
+```
+http://pnrapi.dfth.in/pnr/0123456789
+```
+It returns a dummy response.
+
 ### Status Codes ###
 
 ``OK`` when everything's alright.
